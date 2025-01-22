@@ -3,188 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whiteout Survival - State 2128</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --background-color: #121212;
-            --text-color: #ffffff;
-            --card-color: #1e1e1e;
-        }
-
-        [data-theme="light"] {
-            --background-color: #ffffff;
-            --text-color: #000000;
-            --card-color: #f4f4f4;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-
-        nav {
-            background-color: var(--card-color);
-        }
-
-        .tabs .tab a {
-            color: var(--text-color);
-        }
-
-        .tabs .tab a.active {
-            color: #2196f3;
-        }
-
-        .tabs .indicator {
-            background-color: #2196f3;
-        }
-
-        .table-container {
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: var(--card-color);
-            color: var(--text-color);
-        }
-
-        td {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            border-bottom: 1px solid #ccc;
-        }
-
-        .theme-toggle {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-    </style>
+    <title>State 2128 - Whiteout Survival</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-theme="dark">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Whiteout Survival - State 2128</a>
-            <ul id="nav-mobile" class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#guides">Guides</a></li>
-                <li class="tab"><a href="#zap-rules">ZAP Rules</a></li>
-                <li class="tab"><a href="#alliances">Alliances</a></li>
-                <li class="tab"><a href="#wanted">Wanted</a></li>
-            </ul>
+<body class="bg-light text-dark">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">State 2128</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="pages/zap.html">ZAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/alliances.html">Alliances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/most-wanted.html">Most Wanted</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <button class="btn theme-toggle">Toggle Theme</button>
-
-    <div class="container">
-        <div id="guides" class="content-section active">
-            <h4>Guides</h4>
-            <p>Welcome to the Guides section. Here you will find helpful information on how to succeed in the state.</p>
+    <!-- Header Section -->
+    <header class="text-center py-5 bg-primary text-white">
+        <div class="container">
+            <h1>Welcome to State 2128 - Whiteout Survival</h1>
+            <p class="lead">Your ultimate resource hub for thriving in Whiteout Survival</p>
         </div>
+    </header>
 
-        <div id="zap-rules" class="content-section">
-            <h4>ZAP Rules</h4>
-            <ul>
-                <li><strong>Freedom of Speech:</strong> No restrictions on speech in world or private chats. If you find someone's language offensive, use the blacklist feature to block them.</li>
-                <li><strong>City Attacks:</strong> No attacks on cities unless the player is not part of an alliance.</li>
-                <li><strong>Scouting:</strong> Scouting is permitted at all times.</li>
-                <li><strong>Alliance Structures:</strong> Attacks on Alliance Headquarters or banners are strictly prohibited.</li>
-                <li><strong>Tile Attacks:</strong> Tile attacks are allowed, but only on cities that occupy space or gather in another alliance's territory.</li>
-                <li><strong>Scheduled Battles:</strong> Alliances can schedule battles with each other by mutual agreement. Have some honor, quit attacking when everyone is offline.</li>
-                <li><strong>Presidency Election:</strong> The presidency will be decided by an election where each alliance gets one vote.</li>
-                <li><strong>Whale Distribution:</strong> High-powered players ("whales") should be distributed across the top 10 alliances to ensure power is not concentrated within just a few alliances. This will make facility battles more competitive, fun, and a learning experience for everyone.</li>
-            </ul>
-        </div>
+    <!-- Content Section -->
+    <main class="container my-5">
+        <section>
+            <h2>About State 2128</h2>
+            <p>Welcome to the official website for State 2128 in Whiteout Survival. Explore guides, connect with alliances, and stay updated with the latest game strategies and rankings.</p>
+        </section>
 
-        <div id="alliances" class="content-section">
-            <h4>Alliances</h4>
-            <p>Details about the alliances in the state will go here.</p>
-        </div>
-
-        <div id="wanted" class="content-section">
-            <h4>Wanted</h4>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Image</th>
-                            <th>ID</th>
-                            <th>Bounty</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://via.placeholder.com/50" alt="Example"></td>
-                            <td>#12345</td>
-                            <td>5000 Gold</td>
-                            <td>Known for raiding resource tiles without permission.</td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://via.placeholder.com/50" alt="Example"></td>
-                            <td>#67890</td>
-                            <td>8000 Gold</td>
-                            <td>Frequently launches unsanctioned attacks on alliances.</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">ZAP</h5>
+                        <p class="card-text">Learn all about ZAP strategies and tips.</p>
+                        <a href="pages/zap.html" class="btn btn-light">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Guides</h5>
+                        <p class="card-text">Explore detailed guides for improving your survival skills.</p>
+                        <a href="pages/guides.html" class="btn btn-light">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.tabs');
-            const contentSections = document.querySelectorAll('.content-section');
-            const toggleButton = document.querySelector('.theme-toggle');
-            const body = document.body;
+    </main>
 
-            // Initialize Materialize Tabs
-            M.Tabs.init(tabs, {});
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 State 2128 - Whiteout Survival. All rights reserved.</p>
+    </footer>
 
-            // Tab Switching Logic
-            document.querySelectorAll('.tabs a').forEach(tab => {
-                tab.addEventListener('click', function(event) {
-                    event.preventDefault();
-
-                    const targetId = this.getAttribute('href').substring(1);
-
-                    contentSections.forEach(section => {
-                        if (section.id === targetId) {
-                            section.classList.add('active');
-                        } else {
-                            section.classList.remove('active');
-                        }
-                    });
-                });
-            });
-
-            // Theme Toggle Logic
-            toggleButton.addEventListener('click', () => {
-                const currentTheme = body.getAttribute('data-theme');
-                body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
-
