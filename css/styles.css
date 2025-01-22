@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bg-primary {
+    background-color: #001f3f !important; /* Navy Blue */
+}
+
+.text-primary {
+    color: #001f3f !important;
+}
+
+.btn-light {
+    color: #001f3f;
+    border-color: #ffffff;
+}
