@@ -10,11 +10,20 @@
         body {
             font-family: Arial, sans-serif;
         }
-        html {
-            scroll-behavior: smooth;
+        .tabs .tab a {
+            color: #000;
         }
-        .container {
-            margin-top: 20px;
+        .tabs .tab a.active {
+            color: #2196f3;
+        }
+        .tabs .indicator {
+            background-color: #2196f3;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
         }
     </style>
 </head>
@@ -22,22 +31,23 @@
     <nav>
         <div class="nav-wrapper blue">
             <a href="#" class="brand-logo center">Zero Aggression Pact</a>
-            <ul id="nav-mobile" class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#guides" class="active">Guides</a></li>
-                <li class="tab"><a href="#zap-rules">ZAP Rules</a></li>
-                <li class="tab"><a href="#alliances">Alliances</a></li>
-                <li class="tab"><a href="#wanted">Wanted</a></li>
-            </ul>
         </div>
     </nav>
 
     <div class="container">
-        <div id="guides" class="section">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#guides">Guides</a></li>
+            <li class="tab col s3"><a href="#zap-rules">ZAP Rules</a></li>
+            <li class="tab col s3"><a href="#alliances">Alliances</a></li>
+            <li class="tab col s3"><a href="#wanted">Wanted</a></li>
+        </ul>
+
+        <div id="guides" class="content-section active">
             <h4>Guides</h4>
             <p>Welcome to the Guides section. Here you will find helpful information on how to succeed in the state.</p>
         </div>
 
-        <div id="zap-rules" class="section">
+        <div id="zap-rules" class="content-section">
             <h4>ZAP Rules</h4>
             <ul>
                 <li><strong>Freedom of Speech:</strong> No restrictions on speech in world or private chats. If you find someone's language offensive, use the blacklist feature to block them.</li>
@@ -51,12 +61,12 @@
             </ul>
         </div>
 
-        <div id="alliances" class="section">
+        <div id="alliances" class="content-section">
             <h4>Alliances</h4>
             <p>Details about the alliances in the state will go here.</p>
         </div>
 
-        <div id="wanted" class="section">
+        <div id="wanted" class="content-section">
             <h4>Wanted</h4>
             <p>This section will feature players or alliances that are marked as wanted in the state.</p>
         </div>
@@ -65,7 +75,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            M.Tabs.init(document.querySelectorAll('.tabs'), {});
+            const tabs = document.querySelectorAll('.tabs');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            M.Tabs.init(tabs, {});
+
+            document.querySelectorAll('.tabs a').forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+
+                    contentSections.forEach(section => {
+                        if (section.id === targetId) {
+                            section.classList.add('active');
+                        } else {
+                            section.classList.remove('active');
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>
